@@ -1,0 +1,44 @@
+{
+  "name": "devcraft-js",
+  "version": "0.1.0",
+  "description": "A modular JavaScript utility toolkit for developers",
+  "license": "MIT",
+  "author": "Utkarsh Patidar",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.js --format esm,cjs --clean",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "javascript",
+    "utilities",
+    "nodejs",
+    "npm",
+    "devtools"
+  ],
+  "devDependencies": {
+    "tsup": "^9.0.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
